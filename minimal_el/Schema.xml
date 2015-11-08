@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin target="350" edition="1">
+	<properties>
+		<Menu>
+			<property name="Borders">
+				<property name="AssignedValues" value="mavLeft,mavTop,mavRight,mavBottom"/>
+				<property name="Bottom" value="2"/>
+				<property name="Left" value="2"/>
+				<property name="Right" value="2"/>
+				<property name="Top" value="2"/>
+			</property>
+			<property name="ColorBorder1" value="0"/>
+			<property name="ColorBorder2" value="3289650"/>
+			<property name="ColorListBorder" value="5592405"/>
+			<property name="ColorListRow1" value="1644825"/>
+			<property name="ColorListRow2" value="1644825"/>
+			<property name="ColorListSelection" value="1315860"/>
+			<property name="ColorListSelectionHot" value="1315860"/>
+			<property name="ColorListText" value="10066329"/>
+			<property name="Font" value="Tahoma,11645361,13,0"/>
+			<property name="FontDisabled" value="Tahoma,3289650,13,0"/>
+			<property name="FontSelected" value="Tahoma,16777215,13,0"/>
+			<property name="Texture" value="ContextMenuSkin0"/>
+			<property name="TextureGutter" value="ContextMenuSkin1"/>
+			<property name="TextureSeparator" value="ContextMenuSkin2"/>
+		</Menu>
+		<Hint>
+			<property name="ColorBorder" value="9868950"/>
+			<property name="ColorContent1" value="3289650"/>
+			<property name="ColorContent2" value="1315860"/>
+			<property name="ColorText" value="11645361"/>
+		</Hint>
+		<blur/>
+	</properties>
+	<forms>
+		<form name="AIMPMainForm">
+			<properties>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="DropWheel">
+			<properties>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="TrayControl">
+			<properties>
+				<property name="MagnetRectOffsets" value="3,3,3,3"/>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="QFI">
+			<properties>
+				<property name="MagnetRectOffsets" value="3,3,3,3"/>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="PlaylistFrame" master="AIMPMainForm">
+			<properties>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="EqualizerFrame" master="AIMPMainForm">
+			<properties>
+				<property name="Placement" margins="-3,9,-2,0" value="2"/>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+		<form name="TrayControlFlow" master="TrayControl">
+			<properties>
+				<property name="Placement" margins="0,1,0,1" value="1"/>
+				<property name="SizingHitTestAreaWidth" value="5"/>
+			</properties>
+		</form>
+	</forms>
+	<providers/>
+</skin>

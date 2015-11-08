@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image>
+	<properties>
+		<property name="StretchMode" value="mbsTile"/>
+		<property name="TilePoint" value="201,4,350,0"/>
+	</properties>
+</image>

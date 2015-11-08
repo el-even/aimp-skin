@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<items>
+		<item class="LayoutContainer" name="EQ">
+			<properties>
+				<property name="Alignment" value="laClient"/>
+				<property name="AllowResizeByHeight" value="False"/>
+				<property name="AllowResizeByWidth" value="False"/>
+				<property name="Texture" value="EQ.Texture"/>
+			</properties>
+			<controls>
+				<control class="SliderHorizontal" name="PreAmp">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvEqualizer" SourcePin="Preamp" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,1,0,0" margins="111,115,11,9" Size="128,9"/>
+						<property name="Skin" value="PreAmp.Skin"/>
+						<property name="SkinThumb" value="PreAmp.SkinThumb"/>
+					</properties>
+				</control>
+				<control class="Button" name="LiB">
+					<properties>
+						<property name="PlaceInfo" anchors="1,1,0,0" margins="231,54,2,62" Size="17,17"/>
+						<property name="PopupMenu" value="pmEqualizer"/>
+						<property name="Skin" value="LiB.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="HideBtn">
+					<properties>
+						<property name="Bindings">
+							<link Source="EqualizerFrame" SourcePin="Visible" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="0,1,1,0" margins="229,4,4,112" Size="17,17"/>
+						<property name="Skin" value="HideBtn.Skin"/>
+					</properties>
+				</control>
+				<control class="Switch" name="EQSwitch">
+					<properties>
+						<property name="Bindings">
+							<link Source="acEqualizerSwitch" SourcePin="Action" TargetPin="Action"/>
+							<link Source="acEqualizerSwitch" SourcePin="State" TargetPin="State"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,1,0,0" margins="212,55,22,62" Size="16,16"/>
+						<property name="Skin" value="EQSwitch.Skin"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="DSPBox">
+					<properties>
+						<property name="Bindings">
+							<link Source="DSPPluginInfo" SourcePin="Info" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Verdana,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="8,112,144,8" Size="98,13"/>
+						<property name="Skin" value="DSPBox.Skin"/>
+					</properties>
+				</control>
+				<control class="EqualizerDisplay" name="AIMPEQDisplay">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvEqualizer" SourcePin="Curve" TargetPin="Action"/>
+						</property>
+						<property name="ColorCurve" value="11645361"/>
+						<property name="ColorPreamp" value="3289650"/>
+						<property name="PlaceInfo" anchors="1,1,0,0" margins="6,12,43,20" Size="201,101"/>
+						<property name="Skin" value="AIMPEQDisplay.Skin"/>
+					</properties>
+				</control>
+			</controls>
+		</item>
+	</items>
+</layout>

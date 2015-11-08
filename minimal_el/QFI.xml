@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<items>
+		<item class="LayoutContainer" name="QFI">
+			<properties>
+				<property name="AllowResizeByHeight" value="False"/>
+				<property name="AllowResizeByWidth" value="False"/>
+				<property name="Texture" value="QFI.Texture"/>
+			</properties>
+			<controls>
+				<control class="TextDisplay" name="QFIFileName">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileName" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,8553090,12,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="0,0,250,133" Size="70,0"/>
+						<property name="Skin" value="QFIFileName.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="QFIEditTags">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="ActionEditInfo" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,0,0,1" margins="174,89,130,32" Size="16,16"/>
+						<property name="Skin" value="QFIEditTags.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="QFIClose">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="ActionClose" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="0,1,1,0" margins="299,4,4,112" Size="17,17"/>
+						<property name="Skin" value="QFIClose.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="QFICopyFileInfo">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="ActionCopyInfo" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,0,0,1" margins="152,89,152,32" Size="16,16"/>
+						<property name="Skin" value="QFICopyFileInfo.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="QFICopyFile">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="ActionCopyFile" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,0,0,1" margins="130,89,174,32" Size="16,16"/>
+						<property name="Skin" value="QFICopyFile.Skin"/>
+					</properties>
+				</control>
+				<control class="Rating" name="QFIRating">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="Mark" TargetPin="DisplayValue"/>
+							<link Source="prvQFI" SourcePin="MarkAvailable" TargetPin="Visibility"/>
+						</property>
+						<property name="PlaceInfo" anchors="1,0,0,1" margins="130,108,125,14" Size="65,13"/>
+						<property name="Skin" value="QFIRating.Skin"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="QFITitle">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,3566791,13,2"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="0,0,250,133" Size="70,0"/>
+						<property name="Skin" value="QFITitle.Skin"/>
+						<property name="Template" value="%T"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="QFIFileInfo">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,8553090,12,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="0,0,250,133" Size="70,0"/>
+						<property name="Skin" value="QFIFileInfo.Skin"/>
+						<property name="Template" value="%H, %B, %C, %S"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="TextLabelClone4">
+					<properties>
+						<property name="Alignment" value="taRightJustify"/>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="0,0,1,1" margins="180,106,12,12" Size="110,15"/>
+						<property name="Skin" value="TextLabelClone4.Skin"/>
+						<property name="Template" value="%H, %B"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="TextLabelClone3">
+					<properties>
+						<property name="Alignment" value="taRightJustify"/>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="0,0,1,1" margins="198,90,12,28" Size="110,15"/>
+						<property name="Skin" value="TextLabelClone3.Skin"/>
+						<property name="Template" value="%C"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="TextLabelTitle">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="130,36,10,82" Size="180,15"/>
+						<property name="Skin" value="TextLabelTitle.Skin"/>
+						<property name="Template" value="%T"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="TextLabelArtist">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="130,18,10,100" Size="180,15"/>
+						<property name="Skin" value="TextLabelArtist.Skin"/>
+						<property name="Template" value="%R"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="QFIArtist">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,8553090,12,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="0,0,250,133" Size="70,0"/>
+						<property name="Skin" value="QFIArtist.Skin"/>
+						<property name="Template" value="%R"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="QFIAlbum">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,8553090,12,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="0,0,250,133" Size="70,0"/>
+						<property name="Skin" value="QFIAlbum.Skin"/>
+						<property name="Template" value="%A"/>
+					</properties>
+				</control>
+				<control class="CoverArtDisplay" name="CoverArtQFI">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="CoverArt" TargetPin="DisplayValue"/>
+						</property>
+						<property name="PlaceInfo" anchors="0,0,0,0" margins="11,11,199,12" Size="110,110"/>
+						<property name="Skin" value="CoverArtQFI.Skin"/>
+					</properties>
+				</control>
+				<control class="TextDisplay" name="TextLabelAlbum">
+					<properties>
+						<property name="Bindings">
+							<link Source="prvQFI" SourcePin="FileInfo" TargetPin="DisplayValue"/>
+						</property>
+						<property name="Font" value="Tahoma,11645361,13,0"/>
+						<property name="PlaceInfo" anchors="1,1,1,0" margins="130,54,10,60" Size="180,15"/>
+						<property name="Skin" value="TextLabelAlbum.Skin"/>
+						<property name="Template" value="%Y - %A"/>
+					</properties>
+				</control>
+			</controls>
+		</item>
+	</items>
+</layout>

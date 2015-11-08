@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<items>
+		<item class="LayoutContainer" name="PlsTopDock">
+			<properties>
+				<property name="Bindings">
+					<link Source="PlaylistFrame" SourcePin="Docked" TargetPin="Visibility" Expression="not Value"/>
+				</property>
+				<property name="Texture" value="PlsTopDock.Texture"/>
+			</properties>
+			<controls>
+				<control class="Button" name="PlsClose">
+					<properties>
+						<property name="Bindings">
+							<link Source="PlaylistFrame" SourcePin="Visible" TargetPin="Action"/>
+						</property>
+						<property name="PlaceInfo" anchors="0,1,1,0" margins="699,3,-716,-20" Size="17,17"/>
+						<property name="Skin" value="PlsClose.Skin"/>
+					</properties>
+				</control>
+				<control class="Button" name="PlsMenu">
+					<properties>
+						<property name="PlaceInfo" anchors="1,1,0,0" margins="3,3,-20,-20" Size="17,17"/>
+						<property name="PopupMenu" value="pmMainMenu"/>
+						<property name="Skin" value="PlsMenu.Skin"/>
+					</properties>
+				</control>
+			</controls>
+		</item>
+		<item class="LayoutTexture" name="PlsBottomBar">
+			<properties>
+				<property name="Alignment" value="laBottom"/>
+				<property name="Bindings">
+					<link Source="PlaylistFrame" SourcePin="Docked" TargetPin="State"/>
+				</property>
+				<property name="Texture" value="PlsBottomBar.Texture"/>
+			</properties>
+		</item>
+		<item class="LayoutTexture" name="PlsLeftBar">
+			<properties>
+				<property name="Alignment" value="laLeft"/>
+				<property name="Bindings">
+					<link Source="PlaylistFrame" SourcePin="Docked" TargetPin="State"/>
+				</property>
+				<property name="Texture" value="PlsLeftBar.Texture"/>
+			</properties>
+		</item>
+		<item class="LayoutTexture" name="PlsRightBar">
+			<properties>
+				<property name="Alignment" value="laRight"/>
+				<property name="Bindings">
+					<link Source="PlaylistFrame" SourcePin="Docked" TargetPin="State"/>
+				</property>
+				<property name="Texture" value="PlsRightBar.Texture"/>
+			</properties>
+		</item>
+		<item class="LayoutItem" name="">
+			<properties>
+				<property name="Alignment" value="laClient"/>
+			</properties>
+			<items>
+				<item class="LayoutContainer" name="Container1">
+					<properties>
+						<property name="Texture" value="Container1.Texture"/>
+					</properties>
+				</item>
+				<item class="LayoutItem" name="TabCtrlContainer">
+					<properties>
+						<property name="AlignmentLevel" value="1"/>
+					</properties>
+					<items>
+						<item class="LayoutContainer" name="TCN_Container">
+							<properties>
+								<property name="Alignment" value="laRight"/>
+								<property name="Texture" value="TCN_Container.Texture"/>
+							</properties>
+						</item>
+						<item class="LayoutContainer" name="TCP_Container">
+							<properties>
+								<property name="Alignment" value="laRight"/>
+								<property name="AlignmentLevel" value="1"/>
+								<property name="Texture" value="TCP_Container.Texture"/>
+							</properties>
+						</item>
+						<item class="LayoutContainer" name="PlaylistTabsSite">
+							<properties>
+								<property name="Alignment" value="laClient"/>
+								<property name="SizeMinimal" value="350,20"/>
+								<property name="Texture" value="PlaylistTabsSite.Texture"/>
+							</properties>
+							<controls>
+								<control class="PlaylistTabs" name="PlaylistTabs">
+									<properties>
+										<property name="DragDropIndicator" value="5263440"/>
+										<property name="DragDropIndicatorBorder" value="5263440"/>
+										<property name="PlaceInfo" anchors="1,1,1,1" margins="0,0,0,0" Size="0,0"/>
+										<property name="PopupMenu" value="pmPlaylistTabs"/>
+										<property name="Skin" value="PlaylistTabs.Skin"/>
+										<property name="TabsOffset" value="4,0,0,0"/>
+										<property name="TabsOptions">
+											<property name="Font" value="Verdana,5263440,13,0"/>
+											<property name="FontActive" value="Verdana,11645361,13,0"/>
+											<property name="FontPlaying" value="Verdana,5263440,13,2"/>
+											<property name="FontPlayingActive" value="Verdana,11645361,13,2"/>
+											<property name="IndentBetweenTabs" value="0"/>
+											<property name="Skin" value="PlaylistTabs.TabsOptions.Skin"/>
+											<property name="TextAlignment" value="taCenter"/>
+											<property name="TextOffsets" value="8,3,8,0"/>
+											<property name="TextOffsetsActive" value="10,0,10,0"/>
+											<property name="ZOrderSorting" value="tctzFromLeftAndRightToMain"/>
+										</property>
+									</properties>
+								</control>
+							</controls>
+						</item>
+					</items>
+				</item>
+				<item class="LayoutContainer" name="TopPanel">
+					<properties>
+						<property name="AlignmentLevel" value="2"/>
+						<property name="Texture" value="TopPanel.Texture"/>
+					</properties>
+					<controls>
+						<control class="Button" name="PlsOpt">
+							<properties>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="296,2,37,1" Size="17,17"/>
+								<property name="PopupMenu" value="pmQuickOptions"/>
+								<property name="Skin" value="PlsOpt.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="btnPlaylistsListMenu">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="3,2,331,2" Size="16,16"/>
+								<property name="PopupMenu" value="pmPlaylistList"/>
+								<property name="Skin" value="btnPlaylistsListMenu.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="PrevPLS">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlaylistPrev" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlaylistPrev" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="22,2,312,2" Size="16,16"/>
+								<property name="Skin" value="PrevPLS.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="NextPLS">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlaylistNext" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlaylistNext" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="41,2,293,2" Size="16,16"/>
+								<property name="Skin" value="NextPLS.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="Bookmarks">
+							<properties>
+								<property name="Bindings">
+									<link Source="prvBookmarks" SourcePin="ContextMenu" TargetPin="ContextMenu"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="316,4,21,3" Size="13,13"/>
+								<property name="Skin" value="Bookmarks.Skin"/>
+							</properties>
+						</control>
+						<control class="TextDisplay" name="CountLabel">
+							<properties>
+								<property name="Bindings">
+									<link Source="Playlist" SourcePin="Count" TargetPin="DisplayValue"/>
+								</property>
+								<property name="Font" value="Verdana,11645361,13,0"/>
+								<property name="PlaceInfo" anchors="1,1,1,0" margins="67,4,248,2" Size="35,14"/>
+								<property name="Skin" value="CountLabel.Skin"/>
+							</properties>
+						</control>
+						<control class="TextDisplay" name="SizeLabel">
+							<properties>
+								<property name="Bindings">
+									<link Source="Playlist" SourcePin="Size" TargetPin="DisplayValue"/>
+								</property>
+								<property name="Font" value="Verdana,11645361,13,0"/>
+								<property name="PlaceInfo" anchors="1,1,1,0" margins="119,4,171,2" Size="60,14"/>
+								<property name="Skin" value="SizeLabel.Skin"/>
+							</properties>
+						</control>
+						<control class="TextDisplay" name="LengthLabel">
+							<properties>
+								<property name="Bindings">
+									<link Source="Playlist" SourcePin="Duration" TargetPin="DisplayValue"/>
+								</property>
+								<property name="Font" value="Verdana,11645361,13,0"/>
+								<property name="PlaceInfo" anchors="1,1,1,0" margins="195,4,60,2" Size="95,14"/>
+								<property name="Skin" value="LengthLabel.Skin"/>
+							</properties>
+						</control>
+					</controls>
+				</item>
+				<item class="LayoutContainer" name="BottomPanel">
+					<properties>
+						<property name="Alignment" value="laBottom"/>
+						<property name="Texture" value="BottomPanel.Texture"/>
+					</properties>
+					<controls>
+						<control class="Button" name="AddBtn">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="57,5,263,5" Size="30,30"/>
+								<property name="PopupMenu" value="pmAdd"/>
+								<property name="Skin" value="AddBtn.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="DelBtn">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="31,8,295,8" Size="24,24"/>
+								<property name="PopupMenu" value="pmDelete"/>
+								<property name="Skin" value="DelBtn.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="MiscBtn">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="5,8,321,8" Size="24,24"/>
+								<property name="PopupMenu" value="pmMisc"/>
+								<property name="Skin" value="MiscBtn.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="SortBtn">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="89,8,237,8" Size="24,24"/>
+								<property name="PopupMenu" value="pmSorting"/>
+								<property name="Skin" value="SortBtn.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="PlsManBtn">
+							<properties>
+								<property name="PlaceInfo" anchors="1,1,0,0" margins="116,8,210,8" Size="24,24"/>
+								<property name="PopupMenu" value="pmManagePlaylist"/>
+								<property name="Skin" value="PlsManBtn.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="QuickSearchBtn">
+							<properties>
+								<property name="Bindings">
+									<link Source="acSearchQuick" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acSearchQuick" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="320,8,6,8" Size="24,24"/>
+								<property name="Skin" value="QuickSearchBtn.Skin"/>
+							</properties>
+						</control>
+						<control link="PlaylistSearch">
+							<properties>
+								<property name="Color" value="1315860"/>
+								<property name="Font" value="Verdana,11645361,13,0"/>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="166,14,34,12" Size="150,14"/>
+								<property name="Skin" value="PlaylistSearch.Skin"/>
+							</properties>
+						</control>
+					</controls>
+				</item>
+				<item class="LayoutItem" name="PlaylistSite">
+					<properties>
+						<property name="Alignment" value="laClient"/>
+					</properties>
+					<items>
+						<item class="LayoutTexture" name="PlsLBrdr">
+							<properties>
+								<property name="Alignment" value="laLeft"/>
+								<property name="Texture" value="PlsLBrdr.Texture"/>
+							</properties>
+						</item>
+						<item class="LayoutTexture" name="PlsRBrdr">
+							<properties>
+								<property name="Alignment" value="laRight"/>
+								<property name="Texture" value="PlsRBrdr.Texture"/>
+							</properties>
+						</item>
+						<item class="LayoutContainer" name="">
+							<properties>
+								<property name="Alignment" value="laClient"/>
+								<property name="Texture" value="0278EC50.Texture"/>
+							</properties>
+							<controls>
+								<control link="Playlist">
+									<properties>
+										<property name="PlaceInfo" anchors="1,1,1,1" margins="0,0,13,0" Size="0,0"/>
+										<property name="Resources">
+											<property name="BackgroundColor" value="986895"/>
+											<property name="FocusRectColor" value="-10066330"/>
+											<property name="HeaderBackground" value="Playlist.Resources.HeaderBackground"/>
+											<property name="HeaderExpandButtons" value="Playlist.Resources.HeaderExpandButtons"/>
+											<property name="HeaderFont" value="Verdana,11645361,13,2"/>
+											<property name="HeaderFontSelected" value="Verdana,11645361,13,2"/>
+											<property name="HeaderHighlightColorSelected" value="-936102860"/>
+											<property name="HeaderSwitches" value="Playlist.Resources.HeaderSwitches"/>
+											<property name="ItemBackgroundColor" value="0"/>
+											<property name="ItemHighlightColorPlaying" value="-937287134"/>
+											<property name="ItemHighlightColorSelected" value="-936102860"/>
+											<property name="ItemHighlightColorSelectedPlaying" value="-936102860"/>
+											<property name="ItemLine1Font" value="Tahoma,11645361,13,0"/>
+											<property name="ItemLine1FontPlaying" value="Tahoma,16777215,13,0"/>
+											<property name="ItemLine1FontSelected" value="Tahoma,11645361,13,0"/>
+											<property name="ItemLine1FontSelectedPlaying" value="Tahoma,16777215,13,0"/>
+											<property name="ItemLine2Font" value="Tahoma,5263440,11,0"/>
+											<property name="ItemLine2FontPlaying" value="Tahoma,6579300,11,0"/>
+											<property name="ItemLine2FontSelected" value="Tahoma,6710886,11,0"/>
+											<property name="ItemLine2FontSelectedPlaying" value="Tahoma,6710886,11,0"/>
+											<property name="ItemTextColorDead" value="4473924"/>
+											<property name="OverlayColor" value="-15461356"/>
+											<property name="Skin" value="Playlist.Resources.Skin"/>
+											<property name="SkinMarks" value="Playlist.Resources.SkinMarks"/>
+											<property name="SkinSwitches" value="Playlist.Resources.SkinSwitches"/>
+										</property>
+										<property name="Skin" value="Playlist.Skin"/>
+									</properties>
+								</control>
+								<control class="ScrollBar" name="PlaylistScrollBar">
+									<properties>
+										<property name="Bindings">
+											<link Source="Playlist" SourcePin="Scrolling" TargetPin="Action"/>
+										</property>
+										<property name="PlaceInfo" anchors="0,1,1,1" margins="0,0,0,0" Size="13,0"/>
+										<property name="Skin" value="PlaylistScrollBar.Skin"/>
+										<property name="SkinButtonDown" value="PlaylistScrollBar.SkinButtonDown"/>
+										<property name="SkinButtonUp" value="PlaylistScrollBar.SkinButtonUp"/>
+										<property name="SkinThumb" value="PlaylistScrollBar.SkinThumb"/>
+									</properties>
+								</control>
+							</controls>
+						</item>
+					</items>
+				</item>
+			</items>
+		</item>
+	</items>
+</layout>

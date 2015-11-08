@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<items>
+		<item class="LayoutItem" name="">
+			<properties>
+				<property name="Alignment" value="laClient"/>
+				<property name="AllowResizeByHeight" value="False"/>
+				<property name="AllowResizeByWidth" value="False"/>
+			</properties>
+			<items>
+				<item class="LayoutContainer" name="TCCTRL">
+					<properties>
+						<property name="AllowResizeByHeight" value="False"/>
+						<property name="AllowResizeByWidth" value="False"/>
+						<property name="Texture" value="TCCTRL.Texture"/>
+					</properties>
+					<controls>
+						<control class="Button" name="TrayRoll">
+							<properties>
+								<property name="Bindings">
+									<link Source="TrayControl" SourcePin="RestoreFromTray" TargetPin="Action"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="209,5,30,27" Size="17,17"/>
+								<property name="Skin" value="TrayRoll.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="TrayStop">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerStop" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerStop" SourcePin="Flashing" TargetPin="Flashing"/>
+									<link Source="acPlayerStop" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="10,9,213,7" Size="33,33"/>
+								<property name="Skin" value="TrayStop.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="TrayPrev">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerPrevTrack" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerPrevTrack" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="45,7,178,7" Size="33,33"/>
+								<property name="Skin" value="TrayPrev.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="TrayOpen">
+							<properties>
+								<property name="Bindings">
+									<link Source="acMainOpenFiles" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acMainOpenFiles" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="159,14,64,7" Size="33,33"/>
+								<property name="Skin" value="TrayOpen.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="TrayNext">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerNextTrack" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerNextTrack" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="123,14,100,7" Size="33,33"/>
+								<property name="Skin" value="TrayNext.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="PlayPauseBtnTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerPlayPause" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerPlayPause" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="81,8,136,4" Size="39,39"/>
+								<property name="Skin" value="PlayPauseBtnTray.Skin"/>
+							</properties>
+						</control>
+						<control class="Button" name="CloseBtnTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="acMainExit" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acMainExit" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,0,1,1" margins="235,27,5,5" Size="17,17"/>
+								<property name="Skin" value="CloseBtnTray.Skin"/>
+							</properties>
+						</control>
+						<control class="Switch" name="TraySot">
+							<properties>
+								<property name="Bindings">
+									<link Source="TrayControl" SourcePin="StayOnTop" TargetPin="Action"/>
+									<link Source="TrayControl" SourcePin="StayOnTop" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,1,1,0" margins="235,5,5,27" Size="17,17"/>
+								<property name="Skin" value="TraySot.Skin"/>
+							</properties>
+						</control>
+						<control class="Switch" name="library">
+							<properties>
+								<property name="Bindings">
+									<link Source="acUtilsAudioLibrary" SourcePin="Action" TargetPin="Action"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,0,1,1" margins="206,23,30,5" Size="17,17"/>
+								<property name="Skin" value="library.Skin"/>
+							</properties>
+						</control>
+					</controls>
+				</item>
+			</items>
+		</item>
+	</items>
+</layout>

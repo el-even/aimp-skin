@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<items>
+		<item class="LayoutItem" name="">
+			<properties>
+				<property name="Alignment" value="laClient"/>
+				<property name="AllowResizeByHeight" value="False"/>
+				<property name="AllowResizeByWidth" value="False"/>
+			</properties>
+			<items>
+				<item class="LayoutContainer" name="TCINFO">
+					<properties>
+						<property name="AllowResizeByHeight" value="False"/>
+						<property name="AllowResizeByWidth" value="False"/>
+						<property name="Texture" value="TCINFO.Texture"/>
+					</properties>
+					<controls>
+						<control class="Switch" name="TrayDHFI">
+							<properties>
+								<property name="Bindings">
+									<link Source="TrayControl" SourcePin="PinChildren" TargetPin="Action"/>
+									<link Source="TrayControl" SourcePin="PinChildren" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,0,1" margins="6,21,6,12" Size="17,17"/>
+								<property name="Skin" value="TrayDHFI.Skin"/>
+							</properties>
+						</control>
+						<control class="RunningLine" name="TrayRS">
+							<properties>
+								<property name="Font" value="Tahoma,16777215,13,0"/>
+								<property name="PlaceInfo" anchors="1,1,1,0" margins="4,2,4,33" Size="252,13"/>
+								<property name="Skin" value="TrayRS.Skin"/>
+							</properties>
+						</control>
+						<control class="SliderHorizontal" name="SeekBarTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="prvPlayerState" SourcePin="Action" TargetPin="Action"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,0,0,1" margins="28,33,28,1" Size="200,13"/>
+								<property name="PopupMenu" value="pmJump"/>
+								<property name="Skin" value="SeekBarTray.Skin"/>
+								<property name="SkinThumb" value="SeekBarTray.SkinThumb"/>
+							</properties>
+						</control>
+						<control class="Switch" name="ShuffleTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerShuffle" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerShuffle" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,0,1,1" margins="233,19,5,12" Size="17,17"/>
+								<property name="Skin" value="ShuffleTray.Skin"/>
+							</properties>
+						</control>
+						<control class="Switch" name="RepeatTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="acPlayerRepeat" SourcePin="Action" TargetPin="Action"/>
+									<link Source="acPlayerRepeat" SourcePin="State" TargetPin="State"/>
+								</property>
+								<property name="PlaceInfo" anchors="0,0,1,1" margins="207,19,30,12" Size="17,17"/>
+								<property name="Skin" value="RepeatTray.Skin"/>
+							</properties>
+						</control>
+						<control class="SliderHorizontal" name="VolumeTray">
+							<properties>
+								<property name="Bindings">
+									<link Source="prvVolume" SourcePin="Action" TargetPin="Action"/>
+								</property>
+								<property name="PlaceInfo" anchors="1,0,1,1" margins="91,24,90,18" Size="75,6"/>
+								<property name="ProgressFillingMode" value="pfmReplace"/>
+								<property name="Skin" value="VolumeTray.Skin"/>
+								<property name="SkinThumb" value="VolumeTray.SkinThumb"/>
+							</properties>
+						</control>
+					</controls>
+				</item>
+			</items>
+		</item>
+	</items>
+</layout>
