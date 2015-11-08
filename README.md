@@ -1,1 +1,1 @@
-Skins for AIMP
+Different skins for different soft
